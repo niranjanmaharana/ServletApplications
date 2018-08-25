@@ -1,0 +1,10 @@
+<web-app>
+	<servlet>
+		<servlet-name>dbservlet</servlet-name>
+		<servlet-class>com.nt.servlet.DBServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dbservlet</servlet-name>
+		<url-pattern>/dburl</url-pattern>
+	</servlet-mapping>
+</web-app>
