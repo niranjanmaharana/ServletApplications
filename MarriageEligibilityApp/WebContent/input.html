@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Input Form</title>
+  <style>
+	td
+	{
+		color:black;
+		font-family:Cambria;
+		font-weight:bold;
+	}
+  </style>
+ </head>
+ <body>
+	<form name="form1" action="marryurl" method="post">
+	<div style="text-align:center;">
+		<img src="jodiimage.jpg" width="365" height="337">
+	</div>
+	<table align="center" style="width:320px; margin:0px auto">
+	<caption><b><h3 style="color:blue;">ELIGIBILITY FOR MARRIAGE</h3></b></caption>
+	<tr>
+		<td>Person Name</td>
+		<td>: <input type="text" name="tpname" required></td>
+	</tr>
+	<tr>
+		<td>Gender</td>
+		<td>: 
+			<input type="radio" name="tgender" value="male">Male 
+			<input type="radio" name="tgender" value="female">Female
+		</td>
+	</tr>
+	<tr>
+		<td>Person Age</td>
+		<td>: <input type="text" name="tage" required></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>&nbsp&nbsp<input type="submit" name="submit" value="Check Eligibility for Marriage"></td>
+	</tr>
+	</table>
+	<center>
+		<img src="footer.png" width="392" height="100">
+	</center>
+	</form>
+ </body>
+</html>
