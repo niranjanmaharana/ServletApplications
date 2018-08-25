@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>	
+	<title>Registration Using Ajax</title>
+</head>
+<body>
+	<form id="regForm">
+		<table>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" id="name"></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" id="email"></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><input type="text" id="email"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input name="submitForm" type="submit" id="submitForm" value="Submit"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<p id="successMsg"></p>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		alert("document ready");
+		$('#submitForm').click(function(event){
+			alert("submit clicked");
+			//set form values
+			var name=$('name').val();
+			var email=$('email').val();
+			var address=$('address').val();
+			
+			//ajax call
+			$.ajax({
+				type:'GET',
+				url:'regurl',
+				data:"name="+name+"&email="+email+"&address="+address,
+				success:function(msg){
+					alert("success");
+				},
+				error:function(msg){
+					alert("error");
+				}
+			});
+		});
+	});
+	</script>
+</body>
+</html>
